@@ -51,13 +51,11 @@ function decode(expr) {
         let item = stack[i].slice(stack[i].indexOf('1'));
         item = item.replace(/10/g, '.');
         item = item.replace(/11/g, '-');
-        item = MORSE_TABLE[item];
-        string.push(item);
+        string.push(MORSE_TABLE[item]);
       }
     
   }  
-  stack = string.join('');
-  return stack;
+  return string.join('');
 }
 
 module.exports = {
